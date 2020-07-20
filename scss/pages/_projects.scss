@@ -1,0 +1,202 @@
+.projects {
+  width: 100%;
+  height: 100vh;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1921px) {
+    width: 100vw;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+
+  }
+
+  &__title {
+    color: $white;
+    font-size: 67px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: pre-line;
+  }
+
+  &-digital, &-print, &-posTrade, &-display {
+
+    @include projects-section;
+
+    &__title {
+      @include projects-title;
+    }
+
+    &__item {
+      @include projects-item;
+    }
+  }
+
+  &-digital, &-print, &-posTrade, &-display {
+
+    &__col-1 {
+
+      @media #{$HD__screens__1920} {
+        width: 33.28125%;
+        padding-left: 210px;
+      }
+    }
+
+    &__col-2 {
+      @media #{$HD__screens__1920} {
+        width: 66.71875%;
+        padding-right: 136px;
+      }
+    }
+  }
+
+
+  &-progress {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-top: 53px;
+
+    &__arrow {
+      display: block;
+      margin: 0 25px 0 50px;
+      width: 15px;
+      height: 15px;
+      border-top: 2px solid $black;
+      border-left: 2px solid $black;
+      transform: rotate(135deg);
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 2px;
+        height: 45px;
+        background-color: black;
+        transform: rotate(-45deg) translate(15px, 4px);
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &-customer {
+    width: 20%;
+  }
+
+  &-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__btn {
+      position: relative;
+      padding: 10px;
+      margin: 0 auto;
+      background: $vermilion;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      transition: all 0.2s linear;
+
+      &-prev,
+      &-next {
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 0;
+          height: 0;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          cursor: pointer;
+        }
+      }
+
+      &-prev {
+        &::after {
+          margin-left: -3px;
+          border-right: 30px solid white;
+        }
+      }
+
+      &-next {
+        &::after {
+          margin-left: 5px;
+          border-left: 30px solid white;
+        }
+      }
+    }
+
+    &__container {
+      width: 71%;
+      margin: 31px auto 0;
+
+      &--1 {
+        &::after {
+          content: '';
+          background-image: url("http://www.marypieroszkiewicz.com/m.pire__project/images/IMac.png");
+          width: 866px;
+          height: 716px;
+          display: block;
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &__carousel {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__wrap {
+      display: flex;
+      height: 100%;
+      width: 300%;
+      flex-shrink: 0;
+      transition: all 0.5s;
+    }
+
+    &__slide {
+      flex-basis: 33.33%;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+    }
+  }
+}
+
+
+@media #{$mobile_land__640} {
+}
+@media #{$tablet__768} {
+}
+@media #{$tablet_land__1024} {
+}
+@media #{$desktop__1280} {
+}
+@media #{$large__screens__1440} {
+}
+@media #{$full__screens__1600} {
+}
+@media #{$HD__screens__1920} {
+}

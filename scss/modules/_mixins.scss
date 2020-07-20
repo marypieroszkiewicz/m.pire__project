@@ -13,4 +13,29 @@
 
 // ----- End Of Clearfix -----
 
+// -- Projects title color
+
+@mixin projects-section {
+  display: flex;
+  //background-color: $white;
+  width: 100%;
+  height: 100vh;
+  //padding: 100px 163px 100px 210px;
+  margin: 100px 0 0;
+}
+
+@mixin projects-title {
+  color: $vermilion;
+  font-size: 67px;
+  text-transform: uppercase;
+  padding-bottom: 63px;
+}
+
+@mixin projects-item {
+  color: $gray;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+
 // ----- END OF MIXINS -----

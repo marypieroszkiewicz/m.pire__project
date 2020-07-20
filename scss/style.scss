@@ -18,8 +18,10 @@
 
 // ----- Components -----
 @import "components/modal";
-@import "components/hero";
+@import "components/banner";
 @import "components/form";
 @import "components/cookie";
 
 // ----- Pages -----
+@import "pages/agency";
+@import "pages/projects";

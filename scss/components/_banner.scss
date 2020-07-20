@@ -1,0 +1,83 @@
+/* ----- BANNER ----- */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 95vh;
+  overflow-x: hidden;
+
+  &__wrap {
+    width: 31.25%;
+
+    &::after {
+      content: 'agencja reklamowa';
+      display: inline-block;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 49px;
+      padding-top: 50px;
+    }
+  }
+
+  &__dot {
+    width: 37px;
+    position: relative;
+    top: -170px;
+    left: -101px;
+  }
+
+  &__scroll {
+    padding-top: 100px;
+
+    &-anchor {
+      text-transform: uppercase;
+      color: $dove-gray;
+
+      &::before, &::after {
+        content: '';
+        display: flex;
+        width: 1px;
+        height: 35px;
+        background-color: $dove-gray;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &::before {
+        bottom: 26px;
+      }
+
+      &::after {
+        bottom: -26px;
+      }
+    }
+  }
+}
+
+.ball {
+  position: absolute;
+  z-index: 4;
+}
+
+
+
+/* ----- END OF HERO ----- */
+
+@media #{$mobile_land__640} {
+}
+@media #{$tablet__768} {
+}
+@media #{$tablet_land__1024} {
+}
+@media #{$desktop__1280} {
+}
+@media #{$large__screens__1440} {
+}
+@media #{$full__screens__1600} {
+}
+@media #{$HD__screens__1920} {
+}

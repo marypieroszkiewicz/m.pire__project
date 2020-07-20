@@ -1,0 +1,27 @@
+.agency {
+  padding: 0 370px 0 293px;
+  text-transform: uppercase;
+
+  &__title {
+    font-size: 67px;
+    color: $vermilion;
+
+    &--color {
+      color: $black;
+    }
+  }
+
+  &__text {
+    font-size: 30px;
+    white-space: pre-line;
+    padding-top: 136px;
+
+    &--color {
+      color: $vermilion;
+    }
+  }
+
+  &--stage-1 {
+    height: 100vh;
+  }
+}
