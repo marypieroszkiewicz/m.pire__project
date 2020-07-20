@@ -7,3 +7,6 @@ node_modules/*
 *.css.map
 package-lock.json
 npm-debug.log
+_samples.scss
+sample.html
+sample.js
